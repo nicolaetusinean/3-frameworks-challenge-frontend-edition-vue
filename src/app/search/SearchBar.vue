@@ -1,8 +1,8 @@
 <template>
-  <form>
+  <form v-on:submit="search();$event.preventDefault();">
     <div class="form-group">
       <input type="text" class="form-control" id="searchTerm"
-             name="searchTerm"
+             name="searchTerm" v-model="searchTerm"
              placeholder="Search for beer name"
              autocomplete="off"
       >
@@ -12,9 +12,35 @@
 </template>
 
 <script>
+import { EventBus } from '../emitter/EventBus.js';
+
 export default {
   name: 'SearchBar',
-  props: { }
+  data: function () {
+    return {
+      searchTerm: '',
+    };
+  },
+  created() {
+    EventBus.$on('left:basic-search', () => {
+      this.searchTerm = '';
+    });
+  },
+  events: {
+    // 'left:basic-search': function () {
+    //   this.searchTerm = '';
+    // }
+  },
+  methods: {
+    search: function () {
+      this.redirectToBasicSearch({
+        'searchTerm': this.searchTerm
+      });
+    },
+    redirectToBasicSearch: function (queryParams) {
+      this.$router.push({ path: '/basic-search', query: queryParams });
+    }
+  }
 }
 </script>
 
