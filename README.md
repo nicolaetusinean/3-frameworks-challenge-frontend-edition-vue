@@ -1,8 +1,18 @@
-# the_beer_bank
+# 3 Frameworks Challenge - Beers Menu - Vue.js
+
+This project was built with Vue.js 2 by Nicolae Tusinean.
+
+Website: https://nicolaetusinean.ro
+
+Linkedin ID: nicolaetusinean
 
 ## Project setup
+
+# Setup the project
 ```
-npm install
+1. Install NodeJS: https://nodejs.org/en/download/
+2. Install NPM: https://www.npmjs.com/get-npm
+4. In CMD open the workspace of this project and run: npm install
 ```
 
 ### Compiles and hot-reloads for development
@@ -25,5 +35,5 @@ npm run test
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Further help
+To get more help on Vue CLI go to [Configuration Reference](https://cli.vuejs.org/config/).
