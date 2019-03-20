@@ -1,5 +1,4 @@
 import injector from 'vue-inject';
-// import axios from 'axios';
 import AxiosObservable from 'axios-observable';
 
 import BeersRepository from "./app/beers/Beers.repository";

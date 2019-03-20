@@ -21,7 +21,9 @@
           <button v-on:click="removeFromFavourites(beer);$event.stopPropagation();"
                   class="btn btn-link favouriteIcon active"
           >&#9734;</button>
-          <img class="card-img-top" :src="beer.image_url" :alt="beer.name">
+          <div class="card-img-top">
+            <img :src="beer.image_url" :alt="beer.name">
+          </div>
           <div class="card-body">
             <h5 class="card-title">{{beer.name}}</h5>
             <p class="card-text">{{beer.tagline}}</p>
